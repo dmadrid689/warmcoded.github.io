@@ -1,33 +1,272 @@
-Privacy Policy — Centwise
-Effective date: June 23, 2026
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Centwise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-Developer: Warmcoded
+    :root {
+      --bg: #f9f9f8;
+      --surface: #ffffff;
+      --border: #e8e6e1;
+      --text-primary: #1a1916;
+      --text-secondary: #6b6860;
+      --accent: #2d6a4f;
+      --accent-light: #e8f4ee;
+      --radius: 10px;
+    }
 
-Contact: warmcoded@proton.me
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+      padding: 2rem 1rem 4rem;
+    }
 
-1. Overview
-Centwise is a unit price calculator app. We are committed to protecting your privacy. This policy explains what data the app handles and how.
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+    }
 
-2. Data We Collect
-We do not collect, transmit, or share any personal information.
-All data you enter in Centwise (product names, prices, quantities, comparisons) is stored locally on your device only using Android's built-in storage. This data never leaves your device and is never accessible to Warmcoded or any third party.
+    /* Header */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
 
-3. In-App Purchases
-Centwise offers an optional one-time Pro upgrade ($1.99 USD) processed through Google Play Billing. Warmcoded does not handle or store any payment information. All billing data is managed exclusively by Google and subject to Google's Privacy Policy.
+    .app-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
 
-4. Third-Party Services
-Centwise does not integrate any third-party analytics, advertising, crash reporting, or tracking SDKs.
+    .app-icon svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-5. Data Export (Pro Feature)
-The Pro tier allows you to export your data as JSON or CSV files. These exports are initiated solely by you and saved to your device. Warmcoded does not receive or have access to exported files.
+    .header-text h1 {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
 
-6. Children's Privacy
-Centwise does not knowingly collect data from anyone, including children under 13. No personal information is collected by the app at any time.
+    .header-text p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin-top: 0.1rem;
+    }
 
-7. Changes to This Policy
-If this policy changes in a future update, the new policy will be posted at this URL with an updated effective date.
+    /* Summary card */
+    .summary-card {
+      background: var(--accent-light);
+      border: 1px solid #b7dfc9;
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2rem;
+    }
 
-8. Contact
-For any privacy-related questions:
+    .summary-card p {
+      font-size: 0.9375rem;
+      color: #1c4a35;
+      font-weight: 500;
+    }
 
-Email: warmcoded@proton.me
+    /* Meta row */
+    .meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .meta-item {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+    }
+
+    .meta-item span {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--text-primary);
+      margin-bottom: 0.6rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 16px;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    p {
+      font-size: 0.9375rem;
+      color: #3a3834;
+      margin-bottom: 0.75rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    strong {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid #b7dfc9;
+      transition: border-color 0.15s;
+    }
+
+    a:hover {
+      border-color: var(--accent);
+    }
+
+    /* Divider */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 1.5rem 1rem 3rem; }
+      .header { margin-bottom: 2rem; }
+      .meta { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <div class="app-icon">
+        <!-- Simple calculator / price icon -->
+        <svg viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="3"/>
+          <path d="M8 8h8M8 12h4M8 16h2"/>
+        </svg>
+      </div>
+      <div class="header-text">
+        <h1>Centwise Privacy Policy</h1>
+        <p>By Warmcoded</p>
+      </div>
+    </div>
+
+    <div class="summary-card">
+      <p>✦ Short version: Centwise does not collect, share, or transmit any personal data. Everything stays on your device.</p>
+    </div>
+
+    <div class="meta">
+      <div class="meta-item">Effective date: <span>June 23, 2026</span></div>
+      <div class="meta-item">Developer: <span>Warmcoded</span></div>
+      <div class="meta-item">Contact: <span><a href="mailto:your@email.com">your@email.com</a></span></div>
+    </div>
+
+    <section>
+      <h2>Overview</h2>
+      <p>Centwise is a unit price calculator app for Android. We are committed to protecting your privacy. This policy explains what data the app handles and how it is used.</p>
+    </section>
+
+    <section>
+      <h2>Data We Collect</h2>
+      <p><strong>We do not collect, transmit, or share any personal information.</strong></p>
+      <p>All data you enter in Centwise — product names, prices, quantities, and comparisons — is stored <strong>locally on your device only</strong> using Android's built-in local storage (Room database). This data never leaves your device and is never accessible to Warmcoded or any third party.</p>
+    </section>
+
+    <section>
+      <h2>In-App Purchases</h2>
+      <p>Centwise offers an optional one-time Pro upgrade processed through <strong>Google Play Billing</strong>. Warmcoded does not handle, process, or store any payment or billing information. All payment data is managed exclusively by Google and is subject to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+    </section>
+
+    <section>
+      <h2>Third-Party Services</h2>
+      <p>Centwise does not integrate any third-party analytics, advertising, crash reporting, or tracking SDKs. No data is sent to external servers at any time.</p>
+    </section>
+
+    <section>
+      <h2>Data Export (Pro Feature)</h2>
+      <p>The Pro tier allows you to export your comparison data as JSON or CSV files. These exports are initiated solely by you and saved directly to your device. Warmcoded does not receive, access, or transmit any exported files.</p>
+    </section>
+
+    <section>
+      <h2>Children's Privacy</h2>
+      <p>Centwise does not knowingly collect data from anyone, including children under the age of 13. No personal information is collected by the app at any time.</p>
+    </section>
+
+    <section>
+      <h2>Changes to This Policy</h2>
+      <p>If this policy changes in a future update, the revised policy will be posted at this URL with an updated effective date. Continued use of the app after changes constitutes acceptance of the new policy.</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>For any privacy-related questions or concerns, please reach out:</p>
+      <p><strong>Email:</strong> <a href="mailto:your@email.com">your@email.com</a></p>
+    </section>
+
+    <div class="footer">
+      <span>© 2026 Warmcoded. All rights reserved.</span>
+      <span>Centwise · Android App</span>
+    </div>
+
+  </div>
+</body>
+</html>
